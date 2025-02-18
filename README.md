@@ -17,8 +17,7 @@ This repository provides a Python script to recursively copy a list of remote su
 4. [Usage](#usage)
 5. [Configuration](#configuration)
 6. [Logging and Output](#logging-and-output)
-7. [Troubleshooting](#troubleshooting)
-8. [License](#license)
+7. [License](#license)
 
 ---
 
