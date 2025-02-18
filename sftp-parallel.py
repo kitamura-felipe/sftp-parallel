@@ -6,8 +6,8 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from tqdm import tqdm
 
 # Import the list of subfolders from a separate file
-# (Ensure 'list_usprp.py' has the variable SUBFOLDERS defined)
-from list_usprp import SUBFOLDERS
+# (Ensure 'list.py' has the variable SUBFOLDERS defined)
+from list import SUBFOLDERS
 
 def sftp_copy_folder(
     host,
@@ -93,7 +93,7 @@ def copy_subfolders_in_parallel(
     successful = set()
 
     # Log file to track successes/failures
-    log_filename = "copy_subfolders_log_usprp.txt"
+    log_filename = "copy_subfolders_log.txt"
 
     with tqdm(total=len(subfolders), desc="Copying subfolders") as pbar, \
          open(log_filename, "a") as log_file:
