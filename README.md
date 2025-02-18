@@ -43,4 +43,24 @@ This repository provides a Python script to recursively copy a list of remote su
 You can install the required packages using:
 ```bash
 pip install -r requirements.txt
+```
 
+## Installation
+
+1. **Clone the Repository**:
+    ```bash
+    git clone https://github.com/yourusername/sftp-copy-utility.git
+    cd sftp-copy-utility
+    ```
+
+2. **Optional: Create a venv**
+    ```bash
+    python -m venv venv
+    source venv/bin/activate  # Linux/macOS
+    # or
+    venv\Scripts\activate     # Windows
+    ```
+3. **Install dependencies**
+    ```bash
+    pip install -r requirements.txt
+    ```
