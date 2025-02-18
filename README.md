@@ -68,6 +68,7 @@ pip install -r requirements.txt
 ## Usage
 
 1. **Update the script with your credentials**
+
    `sftp-parallel.py`:
     ```python
     if __name__ == "__main__":
@@ -97,4 +98,19 @@ pip install -r requirements.txt
         )
     ```
 
-3. 
+2. **Create the list file**
+
+   `list.py`:
+    ```python
+    SUBFOLDERS = ["folder1",
+    "folder2",
+    "folder3"]
+    ```
+
+
+2. **Run the script**
+
+
+    ```bash
+    python3 sftp-parallel.py
+    ```
