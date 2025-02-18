@@ -64,3 +64,37 @@ pip install -r requirements.txt
     ```bash
     pip install -r requirements.txt
     ```
+
+## Usage
+
+1. **Update the script with your credentials**
+   `sftp-parallel.py`:
+    ```python
+    if __name__ == "__main__":
+        HOST = "YOUR_HOST_ADDRESS"             
+        USERNAME = "YOUR_USERNAME"             
+        KEY_FILE = "/path/to/your/private/key" 
+        PORT = 22                              
+    
+        REMOTE_BASE_PATH = "/path/to/remote/base"
+        LOCAL_BASE_PATH = "/path/to/local/base"
+    
+        MAX_RETRIES = 5    
+        MAX_WORKERS = 4    
+        TIMEOUT = 30       
+    
+        copy_subfolders_in_parallel(
+            host=HOST,
+            username=USERNAME,
+            key_filename=KEY_FILE,
+            remote_base_path=REMOTE_BASE_PATH,
+            local_base_path=LOCAL_BASE_PATH,
+            subfolders=SUBFOLDERS,
+            port=PORT,
+            max_retries=MAX_RETRIES,
+            max_workers=MAX_WORKERS,
+            timeout=TIMEOUT
+        )
+    ```
+
+3. 
