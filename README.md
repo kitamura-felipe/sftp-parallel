@@ -114,3 +114,40 @@ pip install -r requirements.txt
     ```bash
     python3 sftp-parallel.py
     ```
+
+## Configuration
+
+- **Concurrent Threads (max_workers)**:
+  - Increase or decrease to optimize the download process based on your system resources and network bandwidth. 
+  - Too high a value may overwhelm the server or your local system.
+
+- **Retries (max_retries)**:
+  - Adjust to allow multiple attempts in case of intermittent network failures or server timeouts.
+
+- **Timeout**:
+  - Each channel has a set timeout during SFTP operations. If the remote server is slow, you might need to increase it.
+
+- **SSH Key File**:
+  - Paramiko requires a private key file (e.g., `id_rsa`). Ensure correct file permissions and that your user has the necessary SSH access privileges.
+
+
+## Logging and Output
+
+- A log file named `copy_subfolders_log.txt` (or similar) is created/appended each time the script runs.
+- It records two types of events:
+  - `[SUCCESS] Copied <subfolder>`
+  - `[FAILURE] Could not copy <subfolder> (Attempt x/y)`
+
+- **Progress Bar**:
+  - The script uses `tqdm` to provide a real-time progress bar in the console, indicating how many subfolders have been processed.
+
+
+## License
+
+This project is licensed under the terms of the **MIT License**. See [LICENSE](LICENSE) for details, or choose another license as appropriate for your needs.
+
+---
+
+**Thank you for using the SFTP Recursive Copy Utility!** If you find any issues or have suggestions for improvement, please open an issue or submit a pull request.
+
+
